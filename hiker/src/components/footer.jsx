@@ -23,33 +23,27 @@ function Footer(){
                 </VStack>
                 <VStack spacing="10px">
                 <h2>IN THE SPOTLIGHT</h2>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
+                    <a href="#">Rewards Program</a>
+                    <a href="#">Deals</a>
+                    <a href="#">News</a>
+                    <a href="#">Outlet & Clearance</a>
+                    <a href="#">Shop by Brand</a>
+                    <a href="#">Sale</a>
                 </VStack>
                 <VStack spacing="10px">
                 <h2>OUR STORES</h2>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
+                    <a href="#">Find a store</a>
+                    <a href="#">EMS Schools</a>
+                    <a href="#">In Store Rentals</a>
                 </VStack>
                 <VStack spacing="10px">
                 <h2>HELP CENTER</h2>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
+                    <a href="#">Customer Service</a>
+                    <a href="#">Reward Help</a>
+                    <a href="#">Shipping</a>
+                    <a href="#">Returns</a>
+                    <a href="#">California Policies</a>
+                    <a href="#">Contact Us</a>
                 </VStack>
                 <VStack spacing="10px" >
                     <h3>SIGN UP FOR EMAILS</h3>
