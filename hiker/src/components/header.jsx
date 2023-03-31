@@ -1,7 +1,7 @@
 import "./header.css"
 import {FaUserAlt,FaShoppingCart} from "react-icons/fa"
 
-//import logo from "./logo1.png"
+import logo from "./logo1.png"
 import {Text, Box,HStack,Image, Input,Flex} from "@chakra-ui/react"
 //import logo1 from "../components/logo1"
 function Header(){
@@ -11,7 +11,7 @@ function Header(){
 
     return(
             <>
-
+                           
         <Box display="flex"  justifyContent="space-between" px="20px" color="white" bgColor="#313F35">
             <Box>
                 <a href="#">Rewards</a>|
@@ -26,7 +26,7 @@ function Header(){
         </Box>
         <Box display="flex"  justifyContent="space-evenly" padding={"10px 10px"} border="1px solid black">
            
-            <Box><Image boxSize='35px' src="logo1.png"/></Box>
+            <Box><Image boxSize='35px' src={require("./logo1.png")}/></Box>
             <Box><Input  width='500px' size='md' focusBorderColor='pink.400'
     placeholder='Search...'/></Box>
           <Text fontSize='xl'> <FaUserAlt/> My Accounts</Text>
