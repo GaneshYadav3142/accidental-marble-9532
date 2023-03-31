@@ -1,16 +1,16 @@
 
 import './App.css';
-import Admin from './pages/admin';
+import Product from './pages/Productpage';
 import Homepage from './pages/homepage';
-
+import Admin from './pages/admin';
 function App() {
   return (
     <div className="App">
    
      <Homepage/>
   
-      <Admin/>
-   
+      {/* <Admin/> */}
+   <Product/>
     </div>
   );
 }
