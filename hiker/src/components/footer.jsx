@@ -58,10 +58,11 @@ function Footer(){
                 </Flex>
                 <hr size="md"/>
                  <Box  display={"flex"} justifyContent={"space-evenly"} padding="10px" spacing="10px">
+                    <Flex   fontSize="30px" w="25%" justifyContent={"space-around"} >
                     <CgTwitter />
                     <CgInstagram/>
                     <IoLogoYoutube/>
-
+                    </Flex>
                 <Text>Copyright © 2023 Eastern Mountain Sports. All Rights Reserved · Privacy Policy · Terms & Conditions</Text>
                  </Box>
 

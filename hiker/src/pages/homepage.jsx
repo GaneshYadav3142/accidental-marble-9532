@@ -11,7 +11,9 @@ import {Text,
         AspectRatio,
         Container} from "@chakra-ui/react"
 
-
+        import Header from "../components/header"
+        import Footer from "../components/footer"
+         import Admin from "./admin"
 
 
 
@@ -20,11 +22,14 @@ function Homepage(){
 
 
 
-    return  <>
+    return  <>     
+                <Box >
+                 <Header/>
+                 </Box>
          <Box>
             <VStack>
                 <Box>
-           <Flex align="center" justify="center" border="1px solid blue"> <Image src="https://media.graphassets.com/WnG8r2YZSkKrxCW6ZiEv?format=pjpg&auto=webp" alt="poster1"/> 
+           <Flex align="center" justify="center"> <Image src="https://media.graphassets.com/WnG8r2YZSkKrxCW6ZiEv?format=pjpg&auto=webp" alt="poster1"/> 
         </Flex>
                </Box>  
              
@@ -235,9 +240,9 @@ function Homepage(){
 </VStack>
 
 </Box>
-    
-    
-    
+    <Box mt="50px">
+   <Footer/> 
+   </Box>
     
     </>
 }  
