@@ -23,9 +23,9 @@ function Homepage(){
 
 
     return  <>     
-                <Box >
+                {/* <Box >
                  <Header/>
-                 </Box>
+                 </Box> */}
          <Box>
             <VStack>
                 <Box>

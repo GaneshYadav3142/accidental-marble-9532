@@ -1,4 +1,5 @@
 import "./header.css"
+import {Link} from "react-router-dom"
 import {FaUserAlt,FaShoppingCart} from "react-icons/fa"
 
 import logo from "./logo1.png"
@@ -26,17 +27,17 @@ function Header(){
         </Box>
         <Box display="flex"  justifyContent="space-evenly" padding={"10px 10px"} border="1px solid black">
            
-            <Box><Image boxSize='35px' src={require("./logo1.png")}/></Box>
+        <Link to="/"> <Box><Image boxSize='35px' src={require("./logo1.png")}/></Box></Link>
             <Box><Input  width='500px' size='md' focusBorderColor='pink.400'
     placeholder='Search...'/></Box>
           <Text fontSize='xl'> <FaUserAlt/> My Accounts</Text>
-           <Text fontSize='xl'> <FaShoppingCart/>Cart</Text>
+          <Link to="/cart"> <Text fontSize='xl'> <FaShoppingCart/>Cart</Text></Link>
         </Box> 
       <Flex justifyContent="space-evenly" bgColor="#fff" border="1px solid black">
         <div className="dropdown">
       <button className="dropbtn">MEN</button>
       <div className="dropdown-content">
-        <a href="#home">Link1</a>
+      <Link to="/productpage"> <a href="#home">Link1</a></Link>
         <a href="#home">Link2</a>
         <a href="#home">Link3</a>
         <a href="#home">Link4</a>
