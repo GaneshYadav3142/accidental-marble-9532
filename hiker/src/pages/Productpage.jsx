@@ -1,4 +1,18 @@
 import axios from "axios"
+import {Link} from "react-router-dom"
+import Singleproduct from "./singleproductpage"
+import {Text, 
+    Box,
+    HStack,
+    Image, 
+    Input,
+    Flex, 
+    Grid, 
+    GridItem, 
+    VStack,
+    Center,
+    AspectRatio,
+    Container} from "@chakra-ui/react"
 import {useReducer,useEffect} from "react"
 const initState={
    loading:false,
@@ -60,18 +74,33 @@ function Product(){
         fetchandupdate(`http://localhost:3000/ecommerce`)
     },[])
 
+    const handlesingle=(data)=>{
+       
+    }
+
     const {err,data,loading}=state
     return (loading?<h1>Loading...</h1>:
             err? <h1>Something Went Wrong...</h1>:
             <>
+            <Box display={"flex"}>
+                <Box width="25%">
+
+                </Box>
+             <Grid   templateColumns='repeat(4, 1fr)' gap="10px" width={"75%"}>
             {data.map((el)=>{
-                return(<div>
-                    <img src={el.image} alt={el.type}/>
-                    <h2>{el.name}</h2>
-                    <h4>{el.price}</h4>
-                    </div>
+                return(  <GridItem w='100%' border={'1px solid black'} >
+                    
+                    <Image src={el.image} alt={el.type}/>
+                    <Link to={`ecommerce/${el.id}`}>{el.name}</Link>
+                    <Text>{el.price}</Text>
+                  
+
+                    </GridItem>
                 )
             })}
+
+            </Grid>
+            </Box>
         </>
     )
 }
