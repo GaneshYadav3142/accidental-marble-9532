@@ -1,5 +1,6 @@
 import axios from "axios"
 import {Link} from "react-router-dom"
+import Footer from "../components/footer"
 import Singleproduct from "./singleproductpage"
 import {Text, 
     Box,
@@ -74,9 +75,9 @@ function Product(){
         fetchandupdate(`http://localhost:3000/ecommerce`)
     },[])
 
-    const handlesingle=(data)=>{
+    // const handlesingle=(data)=>{
        
-    }
+    // }
 
     const {err,data,loading}=state
     return (loading?<h1>Loading...</h1>:
@@ -91,7 +92,7 @@ function Product(){
                 return(  <GridItem w='100%' border={'1px solid black'} >
                     
                     <Image src={el.image} alt={el.type}/>
-                    <Link to={`ecommerce/${el.id}`}>{el.name}</Link>
+                    <Link to={`/productpage/${el.id}`}>{el.name}</Link>
                     <Text>{el.price}</Text>
                   
 
@@ -100,7 +101,11 @@ function Product(){
             })}
 
             </Grid>
+            
             </Box>
+            <Box>
+            <Footer/>
+        </Box>
         </>
     )
 }
