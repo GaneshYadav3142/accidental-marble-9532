@@ -1,6 +1,7 @@
 
 import { handleContext } from "../components/contextapi"
 import {useContext} from "react"
+import {FaUserAlt,FaShoppingCart} from "react-icons/fa"
 import Footer from "../components/footer"
 import {Text, 
     Box,
@@ -95,7 +96,19 @@ bound to sweat. Perspiration, then, seeps t…
         </Box> 
         </GridItem>
         {/* cart button to be included in this section */}
-       <GridItem w='90%'  border={'1px solid black'} ><Box> <Button onClick={()=>Cart(id) }>Addtocart</Button> </Box></GridItem>
+       <GridItem w='90%' maxH="400px" border={'1px solid black'} spacing="7"><Box> 
+        <Box ><Text as="b" color={"pink.400"} fontSize={"5xl"}>${res.price-res.price*0.25}</Text>   <Text as='del' color={"green.200"} fontSize={"2xl"}>${res.price}</Text></Box>
+        <Box fontSize='xl'color={"green.200"}>You save {res.price*0.25} (25%)</Box>
+        <Divider/>
+         <Box><Text  fontSize='2xl'> Your cart qualifies for free shipping</Text></Box>
+         <Divider/>
+         <Box><Text  fontSize='2xl'>You can earn points on this purchase through our rewards program.</Text></Box>
+         <Divider/>
+        <Box p="20px"><Button color={"green.700"}  onClick={()=>Cart(id) }> <FaShoppingCart/>Add to cart</Button> </Box>
+        
+        
+        
+        </Box></GridItem>
         
       
         <GridItem w='100%'  ><Box> <Text  color={"black"}><Box as="b">Description:</Box>
