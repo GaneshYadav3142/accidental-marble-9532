@@ -1,11 +1,18 @@
 import { Box,Center,Checkbox, CheckboxGroup,Stack,
-          Text,Image, Divider, Flex,FormControl,FormLabel,Input
-
+          Text,Image, Divider, Flex,FormControl,FormLabel,Input,Button
+          
 
 } from "@chakra-ui/react"
-
+import Footer from "../components/footer";
+import { useNavigate } from "react-router-dom";
 function Payment(){
 
+
+    const navigate=useNavigate()
+const handleorder=()=>{
+    navigate("/");
+    alert("Order Placed Successfully")
+}
 
     return (
 
@@ -52,9 +59,11 @@ function Payment(){
   </FormControl>
 </Box>
 
+<Box><Button bgColor={"pink.300"} color={"green.700"} onClick={handleorder}>Order Product</Button></Box>
 
 
-
+        </Box>
+        <Box mt="50px"><Footer/>
         </Box>
         </>
     )

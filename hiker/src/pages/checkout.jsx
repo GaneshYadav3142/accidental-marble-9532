@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-
+import Footer from "../components/footer";
 import {
     FormControl,
     FormLabel,
@@ -16,7 +16,7 @@ function Checkout(){
     const navigate=useNavigate()
     return (
         <>
-        <Box p="50px">
+        <Box p="50px" mt="50px">
         <Box maxW="80%" margin="auto" p="50px" border="1px solid black" bgcolor="blackAlpha.500">
         <FormControl isRequired>
             <Flex>
@@ -50,6 +50,9 @@ function Checkout(){
 </Box>
 <Box m="20px"><Button bgColor={"pink.300"} color={"green.700"} onClick={()=>navigate("/payment")}>Payment</Button></Box>
 </Box>
+
+        <Box mt="50px"><Footer/>
+        </Box>
         </>
     )
 }
