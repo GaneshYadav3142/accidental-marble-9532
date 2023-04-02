@@ -38,7 +38,7 @@ console.log(haveid)
     return (
    
     
-     <handleContext.Provider value={{Cart, cartvalue,id}}>
+     <handleContext.Provider value={{Cart, cartvalue,haveid}}>
 
        {children}
 

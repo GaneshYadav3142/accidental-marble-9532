@@ -4,6 +4,8 @@ import Footer from "../components/footer"
 import Singleproduct from "./singleproductpage"
 import {Text, 
     Box,
+    Skeleton,
+    SkeletonText,
     HStack,
     Image, 
     Input,
@@ -80,13 +82,13 @@ function Product(){
     // }
 
     const {err,data,loading}=state
-    return (loading?<h1>Loading...</h1>:
+    return (loading? <Box padding='6' boxShadow='lg' bg='white'><SkeletonText mt='4' startColor='pink.500' endColor='orange.500' noOfLines={10} spacing='7' skeletonHeight='3' /></Box>:
             err? <h1>Something Went Wrong...</h1>:
             <>
-            <Box display={"flex"}>
-                <Box width="25%">
+            <Box display={"flex"} gap="10px">
+                <Box width="25%" border={"1px solid red"}>You have to put filter properties here  </Box>
 
-                </Box>
+              
              <Grid   templateColumns='repeat(4, 1fr)' gap="10px" width={"75%"}>
             {data.map((el)=>{
                 return(  <GridItem w='100%' border={'1px solid black'} >
